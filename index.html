@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,13 +7,13 @@
   <style>
     /* === VARIÁVEIS DE CORES === */
     :root {
-      --bg: #121212;
-      --fg: #e0e0e0;
-      --card-bg: #1e1e1e;
-      --accent: #4f9cff;
-      --border: #2e2e2e;
+      --bg: #ffffff;          /* Fundo branco */
+      --fg: #333333;          /* Texto escuro */
+      --card-bg: #f9f9f9;     /* Cards levemente acinzentados */
+      --accent-blue: #005fae; /* Azul Sesc */
+      --accent-yellow: #ffd200; /* Amarelo vibrante */
+      --border: #e0e0e0;      /* Bordas suaves */
     }
-
 
     /* === RESET E BODY === */
     * {
@@ -35,17 +34,30 @@
     header {
       text-align: center;
       padding: 2rem 1rem;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 2px solid var(--accent-blue);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    header .logo {
+      max-width: 180px;
+      height: auto;
     }
 
     header h1 {
       font-size: 2.5rem;
-      color: var(--accent);
+      color: var(--accent-blue);
+    }
+
+    header p {
+      color: var(--accent-yellow);
+      font-weight: 500;
     }
 
     .search-box {
       position: relative;
-      margin-top: 1rem;
       display: inline-block;
     }
 
@@ -64,7 +76,7 @@
       top: 50%;
       transform: translateY(-50%);
       width: 1rem;
-      fill: var(--fg);
+      fill: var(--accent-blue);
     }
 
     /* === CONTEÚDO PRINCIPAL === */
@@ -85,6 +97,11 @@
       flex-wrap: wrap;
       gap: 1rem;
       align-items: flex-start;
+      transition: transform 0.3s ease;
+    }
+
+    .entry:hover {
+      transform: translateY(-5px);
     }
 
     .entry img {
@@ -93,21 +110,23 @@
       height: 120px;
       object-fit: cover;
       border-radius: 50%;
-      border: 2px solid var(--accent);
-    }
-
-    .entry .text {
-      flex: 1;
-      min-width: 200px;
+      border: 3px solid var(--accent-yellow);
     }
 
     .entry .text h2 {
-      color: var(--accent);
+      color: var(--accent-blue);
       margin-bottom: .5rem;
+    }
+
+    .entry .text h3 {
+      color: var(--accent-yellow);
+      font-size: 1rem;
+      margin-top: -0.5rem;
     }
 
     .entry .text p {
       text-align: justify;
+      margin-top: 0.5rem;
     }
 
     .entry video {
@@ -117,6 +136,7 @@
       height: auto;
       border-radius: 4px;
       outline: none;
+      border: 2px solid var(--accent-blue);
     }
 
     /* RESPONSIVO: empilha no mobile */
@@ -139,17 +159,16 @@
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <h1>🎉Dia da Família 🎉</h1>
-    <p>Uma homenagem do 3 ano do ensino médio do Colégio Sesc Centro.</p>
+    <img src="content/image/sesc.png" alt="Logo Sesc" class="logo" />
+    <h1>Dia da Família</h1>
+    <p style="color: #005fae;">Uma homenagem do 3º ano do Ensino Médio aos familiares do Colégio Sesc Centro.</p>
     <div class="search-box">
       <input type="text" id="search" placeholder="Pesquisar por nome..." />
       <svg viewBox="0 0 24 24">
-        <path
-          d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z" />
+        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z" />
       </svg>
     </div>
   </header>
@@ -433,45 +452,16 @@ E também escolhi a cena da dança entre os protagonistas do filme Orgulho e Pre
       </video>
     </div>
     <!-- -------------------------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="entry" data-name="Eduardo">
-      <img src="content/image/" >
-      <div class="text">
-        <h2>Eduardo</h2>
-        <p>
-          
-        </p>
-      </div>
-      <video controls>
-        <source src="content/video/" type="video/mp4">
-        Seu navegador não suporta vídeo.
-      </video>
-    </div>
-    <!-- -------------------------------------------------------- -->
     <div class="entry" data-name="rebeca">
-      <img src="content/image/" >
+      <img src="content/image/rebeca.jpeg" >
       <div class="text">
         <h2>Rebeca</h2>
         <p>
-         
+          Eu escolhi essa cena porque pra mim ela significa persistência e transformação, o filme inteiro mostra isso e isso toca o meu coração e a minha mente. Me mostra que Deus é capaz de agir de maneiras diversas, é apenas preciso que existam pessoas dispostas e gentis, pessoas que queiram investir umas nas outras, amar e aconselhar. Você é capaz de ir muito mais longe quando se aprende o caminho certo e está disposto a abandonar o que é preciso para segui-lo.
         </p>
       </div>
       <video controls>
-        <source src="content/video/" type="video/mp4">
+        <source src="content/video/rebeca.mp4" type="video/mp4">
         Seu navegador não suporta vídeo.
       </video>
     </div>
