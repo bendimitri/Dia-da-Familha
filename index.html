@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dia da Família</title>
+  <style>
+    /* === VARIÁVEIS DE CORES === */
+    :root {
+      --bg: #121212;
+      --fg: #e0e0e0;
+      --card-bg: #1e1e1e;
+      --accent: #4f9cff;
+      --border: #2e2e2e;
+    }
+
+
+    /* === RESET E BODY === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* === HEADER E BUSCA === */
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+    }
+
+    .search-box {
+      position: relative;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+
+    .search-box input {
+      padding: .5rem 2.5rem .5rem .75rem;
+      font-size: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--card-bg);
+      color: var(--fg);
+    }
+
+    .search-box svg {
+      position: absolute;
+      right: .75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1rem;
+      fill: var(--fg);
+    }
+
+    /* === CONTEÚDO PRINCIPAL === */
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .entry {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .entry img {
+      flex: 0 0 120px;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+    }
+
+    .entry .text {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .entry .text h2 {
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+
+    .entry .text p {
+      text-align: justify;
+    }
+
+    .entry video {
+      flex: 1;
+      min-width: 200px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    /* RESPONSIVO: empilha no mobile */
+    @media (max-width:600px) {
+      .entry {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .entry img,
+      .entry video,
+      .entry .text {
+        width: 100%;
+      }
+
+      .entry img {
+        max-width: 150px;
+        margin: 0 auto 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎉Dia da Família 🎉</h1>
+    <p>Uma homenagem do 3 ano do ensino médio do Colégio Sesc Centro.</p>
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Pesquisar por nome..." />
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z" />
+      </svg>
+    </div>
+  </header>
+
+  <main id="list">
+
+
+
+
+
+
+
+
+
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="dimitri">
+      <img src="content/image/Dimitri.jpg" alt="Dimitri Robert">
+      <div class="text">
+        <h2>Dimitri<h3 style="color: rgb(148, 179, 223);font-size: 15px;">-Desenvolvedor</h3> </h2>
+        <p>
+          Uma das minhas cenas favoritas é quando o Hopper, amigo da Joyce em Stranger Things,
+          encontra o filho dela desacordado e faz massagem cardíaca, lembrando-se de sua filha
+          que faleceu. Essa cena me faz refletir sobre a vida curta e a importância de lutar
+          por quem amamos.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Dimitri.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="gabriel">
+      <img src="content/image/Gabriel.jpeg" alt="Gabriel Braithwaite">
+      <div class="text">
+        <h2>Gabriel</h2>
+        <p>
+          Escolhi a cena do filme Até o Último Homem em que o capitão pergunta por que ainda não começaram o ataque, e
+          respondem que estão esperando o soldado Ross terminar de orar por eles. Esse momento me marcou profundamente,
+          pois é uma cena muito forte e cheia de significado. Ele mostra a determinação de um homem, sua fé e esperança,
+          e como isso influencia todos ao seu redor. Em meio a tanta tensão, existe um momento de silêncio que carrega
+          um peso enorme, deixando claro que a verdadeira força também está na coragem de continuar acreditando, mesmo
+          nas situações mais difíceis.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Gabriel.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="ana baima">
+      <img src="content/image/Baima.jpeg" alt="Anna Baima">
+      <div class="text">
+        <h2>Ana Baima</h2>
+        <p>
+          Basicamente é minha cena favorita de How I Met Your Mother
+          por ser a pessoa menos romântica do mundo se permitindo aceitar que ama alguém.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Baima.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="alana">
+      <img src="content/image/Alana.jpeg" alt="Alana Wash">
+      <div class="text">
+        <h2>Alana</h2>
+        <p>
+          Eu, Alana, escolhi a cena do filme enrolados, onde repunzel sai da torre e suas emoções oxilam de forma
+          brusca, gerando humor a cena. acredito que essa cena possa me resumir por sempre pensar tentar pensar no lado
+          bom das coisas, mas muitas vezes, a imaginação da pior parte da situação sempre acaba dominando e mudando
+          minha forma de lidar com algo.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Alana.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="gabriela">
+      <img src="content/image/Gaby.jpeg" alt="Gaby">
+      <div class="text">
+        <h2>Gabriela</h2>
+        <p>
+          Eu escolhi esse trecho, primeiro porque o filme Como Eu Era Antes de Você é simplesmente um dos melhores
+          romances que existem; segundo, porque eu realmente me identifico com a ideia de que nossas pequenas escolhas
+          dizem muito sobre a nossa essência. Para mim, essa cena mostra como cada detalhe, muitas vezes imperceptíveis,
+          é o que nos torna tão únicos.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Gaby.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="julia">
+      <img src="content/image/Julia.jpeg" alt="julia">
+      <div class="text">
+        <h2>Julia</h2>
+        <p>
+          Minha parte favorita é do filme Moana, eu era muito apegada à minha vó e esse cena é mecheu muito comigo pois
+          minha vó é falecida, mesmo que ela já tenha falecido, sei que ela está sempre comigo.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Julia.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="leticia">
+      <img src="content/image/Leticia.jpeg" alt="Julia">
+      <div class="text">
+        <h2>Letícia</h2>
+        <p>
+          Eu Letícia Saito escolho o filme: Divertidamente 2, Na cena em que a personagem Alegria "surta", demonstrando
+          raiva e começando a chorar, escolhi esse momento porque, ao longo da história, a Alegria tenta ver o lado
+          positivo de todas as situações e se esforça para manter a personagem principal e todos ao seu redor sempre
+          feliz e animada, essa cena mostra que não é preciso estar feliz o tempo todo e tudo bem não demonstrar só
+          felicidade.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Leticia.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="paola">
+      <img src="content/image/Paola.jpeg" alt="Paola">
+      <div class="text">
+        <h2>Paola</h2>
+        <p>
+          Essa cena mostra que, mesmo quando a gente se sente sozinho ou perdidos, a verdadeira família e os verdadeiros
+          amigos sempre estiveram presentes de alguma forma.E isso me representa, pois minha familia e meus amigos são
+          oque mais importa para mim, e também se reflete a minha história pessoal durante a fase que estou passando na
+          minha vida.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Paola.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="raquel">
+      <img src="content/image/Raquel.jpeg" alt="Raquel">
+      <div class="text">
+        <h2>Raquel</h2>
+        <p>
+          Escolhi "Hora do Rush" porque é meu filme favorito. A caracterização dos protagonistas (detetive Carter e
+          inspetor Lee) foi sensacional, um encaixe perfeito! A forma com que o ator Jackie Chan interpreta o inspetor
+          Lee (sem dublê), misturado com a comédia do Detetive Carter (Chris Tucker), cria uma dinâmica incrível. O
+          roteiro consegue combinar comédia e ação de uma maneira sensacional, fazendo com que cenas de tensão se tornem
+          cômicas. Pra mim, é um dos melhores filmes de todos os tempos, porque ele te prende do começo ao fim. É
+          simplesmente uma obra cinematográfica!
+
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Raquel.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="maria fernanda">
+      <img src="content/image/Maria.jpeg" alt="Maria">
+      <div class="text">
+        <h2>Maria Fernanda</h2>
+        <p>
+          É do filme passado branco: uma história de extraordinário. Eu escolhi essa cena porque considero essa fala uma
+          verdade muito bonita, sobre como a gentileza deveria mover o mundo em um ato de coragem.
+
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Maria.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="thayane">
+      <img src="content/image/Thayane.jpeg" alt="Raquel">
+      <div class="text">
+        <h2>Thayane</h2>
+        <p>
+          No episódio 6 da temporada 7 de "The Vampire Diaries”,
+          Elena Gilbert começa a retomar suas memórias e sentimentos por Damon Salvatore. Após ter passado um tempo sob
+          o efeito da magia que bloqueava suas lembranças, Elena se vê confrontada com flashes de momentos
+          significativos que viveu ao lado de Damon.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Thayane.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="natália">
+      <img src="content/image/Natalia.jpeg" alt="Natalia">
+      <div class="text">
+        <h2>Natália</h2>
+        <p>
+          Esse é o meu filme de animação favorito! Gosto de como eles tem cuidado com a Boo e as interações deles
+          também! O cenário do filme é bem interessante e o desenrolar é engraçado.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/naty.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="camila">
+      <img src="content/image/camila.png" alt="camila">
+      <div class="text">
+        <h2>Camila</h2>
+        <p>
+          Eu gosto muito dessa cena do filme a culpa é das estrelas, pois mostra que ela ficou com ele até o final.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/camila.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="joão">
+      <img src="content/image/joão.png" alt="camila">
+      <div class="text">
+        <h2>João</h2>
+        <p>
+          Essa cena me representa, pois sou aquele que, quando todos estão tranquilos e em paz, faço questão de incomodar. Além disso, não tenho nenhuma paciência para esperar o tempo passar — preciso estar falando, cantando ou simplesmente fazendo sons irritantes. Sou eu quem espalha o caos pela escola, seja com os alunos ou com os professores.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/joao.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="fernando">
+      <img src="content/image/fernandinhogameplay.png" alt="camila">
+      <div class="text">
+        <h2>Fernando</h2>
+        <p>
+          Escolhi esse compilado de cenas do filme WALL-E porque ele mostra como dois robôs que não se conheciam vão criando, pouco a pouco, um laço verdadeiro de amizade e carinho. A sequência destaca como ações podem ser mais poderosas do que palavras — o filme tem poucas falas, mas muitos gestos e atitudes que expressam sentimentos. Isso combina comigo, porque, mesmo sem falar muito, acredito que minhas ações mostram o que realmente sinto.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/fernandinhogameplays.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+    <!-- -------------------------------------------------------- -->
+    <div class="entry" data-name="caroline">
+      <img src="content/image/caroline.jpg" alt="caroline">
+      <div class="text">
+        <h2>Caroline</h2>
+        <p>
+          Meu nome é Caroline Kelm, professora de filosofia, escolhi a cena final do filme Gladiador. Além de ser uma das cenas mais bonitas do cinema, passa a mensagem de dever cumprido com honra e valores morais.
+E também escolhi a cena da dança entre os protagonistas do filme Orgulho e Preconceito porque mostra a tensão emocional entre os personagens que são levados para um mundo à parte durante a música.
+        </p>
+      </div>
+      <video controls>
+        <source src="content/video/Caroline.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+      <video controls>
+        <source src="content/video/Caroline2.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+  <script>
+    // Busca dinâmica
+    document.getElementById('search').addEventListener('input', e => {
+      const termo = e.target.value.toLowerCase();
+      document.querySelectorAll('.entry').forEach(card => {
+        card.style.display = card.dataset.name.includes(termo) ? 'flex' : 'none';
+      });
+    });
+
+    // Garante que apenas um vídeo toque por vez
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+      video.addEventListener('play', () => {
+        videos.forEach(other => {
+          if (other !== video) other.pause();
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
